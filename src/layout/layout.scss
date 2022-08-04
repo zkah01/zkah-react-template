@@ -1,0 +1,74 @@
+.app {
+  height: 100vh;
+  &_sider {
+    overflow: auto;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    &_logo {
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 64px;
+      > span {
+        margin-left: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+    }
+    .Menu_con {
+      &::-webkit-scrollbar {
+        width: 6px;
+        background-color: #001529;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #555;
+        border-radius: 32px;
+      }
+    }
+  }
+  &_rightBox {
+    &_header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      margin: auto;
+      z-index: 1;
+      padding: 0 20px;
+      background: #fff;
+      color: #000;
+      display: flex;
+      align-items: center;
+      transition: all 0.2s;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      &_left {
+        flex-grow: 1;
+      }
+      &_right {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &_content {
+      height: calc(100vh - 64px);
+      width: 100%;
+      margin-top: 64px;
+      padding: 10px;
+      transition: all 0.2s;
+      overflow: auto;
+      > div {
+        background: #fff;
+        padding: 20px 10px;
+      }
+      > form {
+        padding: 20px 10px;
+      }
+    }
+  }
+}

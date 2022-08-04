@@ -1,0 +1,8 @@
+// @import '../../../variables.module.scss';
+$main_c: #1890FF;
+$sider_width: 200px;
+
+:export {
+  main_c: $main_c;
+  sider_width: $sider_width;
+}

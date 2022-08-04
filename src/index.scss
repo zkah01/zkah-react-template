@@ -1,0 +1,156 @@
+@import './variables.module.scss';
+html{
+  font-size: 1;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+  font-size: 14px;
+}
+
+div,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100vh;
+}
+
+.fsc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fcc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shengluehao {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.shengluehaoline1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.shengluehaoline2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.shengluehaoline3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+// 附件单元格中多个附件
+.table_file_cell + .table_file_cell {
+  margin-left: 5px;
+}
+
+// 重写antd的一些样式
+.ant-btn + .ant-btn {
+  margin-left: 10px;
+}
+.login_con {
+  .ant-form-item-label > label {
+    width: 130px;
+    margin-right: 100px !important;
+  }
+  .ant-input {
+    width: 250px;
+  }
+}
+/* 一些公共容器样式 */
+.content_wrapper {
+  background-color: inherit !important;
+  > div {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 20px 24px;
+    > .left_top_tit {
+      color: $main_c;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+  }
+}
+.search_con {
+  margin-bottom: 24px;
+  &.bg {
+    background-color: #fff;
+    padding: 20px 10px;
+  }
+  > .ant-form {
+    $label_width: 72px;
+    .ant-form-item {
+      width: 25%;
+      margin-right: 0;
+      margin-bottom: 15px;
+      padding-right: 15px;
+      &.w50 {
+        width: 50%;
+      }
+      &.w100 {
+        width: 100%;
+      }
+      .ant-form-item-label {
+        width: $label_width;
+      }
+      .ant-form-item-control {
+        width: calc(100% - $label_width);
+        overflow: hidden;
+      }
+      .ant-picker-range {
+        width: 100%;
+      }
+    }
+  }
+}
+.biaoge_con {
+  &.bg {
+    background-color: #fff;
+    padding: 20px 10px;
+  }
+  > .warning {
+    color: #faad14;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  > .btn_con {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+  }
+  > .biaoge_title {
+    text-align: center;
+    background-color: #fafafa;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 18px;
+    font-weight: 500;
+    color: $main_c;
+    padding: 16px 0;
+  }
+}
+
+// 表格表头加粗
+.ant-table-thead > tr > th {
+  font-weight: bolder;
+}
